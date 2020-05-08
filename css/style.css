@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/roboto-slab-v11-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/roboto-slab-v11-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Noto Sans Italic"), local("NotoSans-Italic"),
+    url("../fonts/noto-sans-v9-latin-italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/noto-sans-v9-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Kaushan Script"), local("KaushanScript-Regular"),
+    url("../fonts/kaushan-script-v8-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/kaushan-script-v8-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+:root {
+  --first-font: "Montserrat", sans-serif;
+  --secondery-font: "Roboto Slab", serif;
+  --third-font: "Noto Sans", sans-serif;
+  --logo-font: "Kaushan Script";
+  --main-color: #222222;
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.conteiner {
+  width: 940px;
+  margin: 0 auto;
+}
+.contact-us {
+  background-color: var(--main-color);
+}
+header {
+  padding-top: 50px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+.sit-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.logo a {
+  font-family: var(--logo-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.625rem;
+  letter-spacing: 1.3px;
+  line-height: 41px;
+  color: #fed136;
+  text-decoration: none;
+}
+.site-menu {
+  width: 485px;
+  display: flex;
+  justify-content: space-between;
+}
+.site-menu-list:not(:last-child) {
+  margin-right: 40px;
+}
+.site-menu-list-link {
+  font-family: var(--first-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 41px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--main-color);
+  margin: 0 auto;
+}
+
+.site-menu-list:hover .site-menu-list-link {
+  transition: all 200ms linear;
+  color: #fed136;
+}
+.services {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+h2 {
+  margin: 0;
+}
+
+.services-title {
+  font-family: var(--first-font);
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 75px;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-bottom: 5px;
+}
+.subtitle {
+  font-family: var(--third-font);
+  font-size: 1rem;
+  color: rgb(119, 119, 119);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 78px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services-list-item {
+  width: 290px;
+}
+.services-list-item::before {
+  content: "";
+  display: block;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto;
+  border: solid 3px rgb(254, 209, 54);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.e_commerce::before {
+  background-image: url(../img/icons/basket.png);
+}
+.responsiv_web::before {
+  background-image: url(../img/icons/laptop.png);
+}
+.web_security::before {
+  background-image: url(../img/icons/lock.png);
+}
+.services-list-item-title {
+  font-family: var(--first-font);
+  font-size: 1.125rem;
+  color: var(--main-color);
+  line-height: 75px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: -0.45px;
+  margin: 0 0 16px;
+}
+.services-list-item-description {
+  font-family: var(--secondery-font);
+  font-size: 0.875rem;
+  color: rgb(119, 119, 119);
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.35px;
+  margin: 0;
+}
+.contact-us-title {
+  font-family: var(--first-font);
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-bottom: 5px;
+}
+.contact-us {
+  background-image: url(../img/background/map.png);
+  background-repeat: no-repeat;
+  background-position: right bottom 20px;
+  padding-top: 86px;
+  padding-bottom: 115px;
+}
+.input {
+  display: block;
+  width: 456px;
+  border: solid 1px rgb(204, 204, 204);
+  cursor: pointer;
+}
+.input:required:focus:valid {
+  border-color: green;
+}
+.input:required:focus:invalid {
+  border-color: red;
+}
+.contact-form {
+  height: 52px;
+  border-radius: 2px;
+  padding-left: 20px;
+}
+.contact-form:not(:last-child) {
+  margin-bottom: 27px;
+}
+.contact-form:focus,
+.contact-form-message:focus {
+  outline: none;
+}
+.contact-form-message {
+  height: 210px;
+  border-radius: 5px;
+  padding-top: 18px;
+  padding-left: 20px;
+  resize: none;
+}
+.inpu-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+::placeholder {
+  font-size: 0.875rem;
+  font-family: var(--first-font);
+  color: rgb(187, 187, 187);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: -0.35px;
+}
+.btn {
+  display: block;
+  width: 240px;
+  height: 66px;
+  border: none;
+  padding: 0;
+  margin: 0 auto;
+  border-radius: 3px;
+  background-color: rgb(254, 209, 54);
+  font-size: 1.125rem;
+  font-family: var(--first-font);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
